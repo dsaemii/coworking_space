@@ -1,8 +1,6 @@
-package com.example.m223_coworking_space;
+package com.example.m223_coworking_space.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.sql.Date;
 

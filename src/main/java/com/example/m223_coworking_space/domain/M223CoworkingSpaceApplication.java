@@ -1,4 +1,4 @@
-package com.example.m223_coworking_space;
+package com.example.m223_coworking_space.domain;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -9,7 +9,8 @@ public class Booking {
     private @Id
     @GeneratedValue Integer booking_id;
 
-    private Integer user_idfs;
+    @ManyToOne
+    private User user_idfs;
     private Date date;
     private boolean morning;
     private boolean afternoon;
@@ -18,7 +19,7 @@ public class Booking {
 
     public Booking() {}
 
-    public Booking(Integer user_idfs, Date date, boolean morning, boolean afternoon) {
+    public Booking(User user_idfs, Date date, boolean morning, boolean afternoon) {
         this.user_idfs = user_idfs;
         this.date = date;
         this.morning = morning;

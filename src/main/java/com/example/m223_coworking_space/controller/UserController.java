@@ -33,4 +33,16 @@ public class UserController {
     public void deleteUsers() {
         userService.deleteAll();
     }
+
+    @PostMapping("/login")
+    @ResponseStatus(HttpStatus.OK)
+    public void loginUser(String email, String password) {
+         userService.loginUser(email, password);
+    }
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public User getUserById(@PathVariable Integer id) {
+        return userService.getUserById(id);
+    }
 }

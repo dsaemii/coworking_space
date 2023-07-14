@@ -28,6 +28,24 @@ public class BookingController {
         return bookingService.createBooking(booking);
     }
 
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public Booking getBookingById(@PathVariable Integer id) {
+        return bookingService.getBookingById(id);
+    }
+
+    @PutMapping
+    @ResponseStatus(HttpStatus.OK)
+    public Booking updateBooking(@RequestBody Booking booking) {
+        return bookingService.updateBooking(booking);
+    }
+
+    @DeleteMapping
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteBooking(@PathVariable Integer id) {
+        bookingService.deleteBooking(id);
+    }
+
     @DeleteMapping
     @ResponseStatus(HttpStatus.OK)
     public void deleteBookings() {

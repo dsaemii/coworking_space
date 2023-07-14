@@ -23,4 +23,16 @@ public class BookingService {
     public void deleteAll() {
         bookingRepository.deleteAll();
     }
+
+    public Booking getBookingById(Integer id) {
+        return bookingRepository.findById(id).get();
+    }
+
+    public Booking updateBooking(Booking booking) {
+        return bookingRepository.saveAndFlush(booking);
+    }
+
+    public void deleteBooking(Integer id) {
+        bookingRepository.deleteById(id);
+    }
 }

@@ -20,6 +20,11 @@ public class User {
         this.last_name = last_name;
         this.email = email;
         this.password = password;
+        if(user_id == 1) {
+            this.isAdmin = true;
+        } else {
+            this.isAdmin = false;
+        }
     }
 
     public Integer getUser_id() {

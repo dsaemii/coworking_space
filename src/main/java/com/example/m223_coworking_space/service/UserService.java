@@ -23,4 +23,12 @@ public class UserService {
     public void deleteAll() {
         userRepository.deleteAll();
     }
+
+    public User loginUser(String email, String password) {
+        return userRepository.findByEmailAndPassword(email, password);
+    }
+
+    public User getUserById(Integer id) {
+        return userRepository.findById(id).get();
+    }
 }

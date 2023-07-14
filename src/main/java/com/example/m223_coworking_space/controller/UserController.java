@@ -22,16 +22,10 @@ public class UserController {
         return userService.findAll();
     }
 
-    @PostMapping
+    @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
     public User registerUser(@RequestBody User user) {
         return userService.registerUser(user);
-    }
-
-    @DeleteMapping
-    @ResponseStatus(HttpStatus.OK)
-    public void deleteUsers() {
-        userService.deleteAll();
     }
 
     @PostMapping("/login")
@@ -44,5 +38,17 @@ public class UserController {
     @ResponseStatus(HttpStatus.OK)
     public User getUserById(@PathVariable Integer id) {
         return userService.getUserById(id);
+    }
+
+    @DeleteMapping
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteUsers() {
+        userService.deleteAll();
+    }
+
+    @DeleteMapping
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteUser(@PathVariable Integer id) {
+        userService.deleteUser(id);
     }
 }

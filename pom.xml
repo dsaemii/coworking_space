@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>m223_coworking_space</artifactId>
+    <artifactId>coworking_space</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>m223_coworking_space</name>
-    <description>m223_coworking_space</description>
+    <name>coworking_space</name>
+    <description>coworking_space</description>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -63,19 +63,9 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>org.mariadb.jdbc</groupId>
-            <artifactId>mariadb-java-client</artifactId>
-            <version>3.1.4</version>
-        </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mariadb.jdbc</groupId>
-            <artifactId>mariadb-java-client</artifactId>
-            <scope>runtime</scope>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
